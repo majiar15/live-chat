@@ -1,0 +1,129 @@
+.container {
+    display: block;
+    margin: 0px auto;
+    padding: 9px;
+    border: 0.5px solid #c3c3c3;
+    background-color: black;
+    width: 300px;
+    height: 500px;
+}
+
+.stageMessage {
+    background-color: white;
+    border: 1px solid #c3c3c3;
+    overflow-y: scroll;
+    height: 90%;
+    width: 100%;
+}
+
+.stageMessage :first-child {
+    margin-top: 3px;
+}
+
+
+/* style scroll bar */
+
+.stageMessage::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.stageMessage::-webkit-scrollbar:vertical {
+    width: 8px;
+}
+
+.stageMessage::-webkit-scrollbar-button:increment,
+.stageMessage::-webkit-scrollbar-button {
+    display: none;
+}
+
+.stageMessage::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.stageMessage::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.containerWrite {
+    background-color: white;
+    border: 1px solid #c3c3c3;
+    height: 8%;
+    width: 100%;
+}
+
+.messageSend {
+    display: inline-block;
+    padding: 8px;
+    width: auto;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    height: auto;
+    color: black;
+    background-color: rgb(185, 247, 183);
+    border-radius: 30px;
+}
+
+.messageRequest {
+    display: flex;
+    padding: 8px;
+    width: auto;
+    justify-content: flex-end;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    height: auto;
+    color: black;
+    background-color: rgb(183, 209, 247);
+    border-radius: 30px;
+}
+
+.containerWrite {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.Write {
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+.Write input {
+    width: 80%;
+    height: 100%;
+    border-radius: 15px;
+    outline: none;
+}
+
+.Write input :focus {
+    border: 0px;
+}
+
+.send {
+    height: auto;
+    font-size: 30px;
+}
+
+.send :hover {
+    cursor: pointer;
+}
+
+.call {
+    width: 10%;
+    height: 80%;
+}
+
+.call :hover {
+    cursor: pointer;
+}
+
+.videoCall {
+    width: 10%;
+    height: 80%;
+}
+
+.videoCall :hover {
+    cursor: pointer;
+}
