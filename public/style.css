@@ -1,4 +1,4 @@
-.container {
+#container {
     display: block;
     margin: 0px auto;
     padding: 9px;
@@ -8,7 +8,7 @@
     height: 500px;
 }
 
-.stageMessage {
+#stageMessage {
     background-color: white;
     border: 1px solid #c3c3c3;
     overflow-y: scroll;
@@ -16,53 +16,52 @@
     width: 100%;
 }
 
-.stageMessage :first-child {
-    margin-top: 3px;
+#stageMessage :first-child {
+    margin-top: 8px;
 }
 
 
 /* style scroll bar */
 
-.stageMessage::-webkit-scrollbar {
+#stageMessage::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-.stageMessage::-webkit-scrollbar:vertical {
+#stageMessage::-webkit-scrollbar:vertical {
     width: 8px;
 }
 
-.stageMessage::-webkit-scrollbar-button:increment,
-.stageMessage::-webkit-scrollbar-button {
+#stageMessage::-webkit-scrollbar-button:increment,
+#stageMessage::-webkit-scrollbar-button {
     display: none;
 }
 
-.stageMessage::-webkit-scrollbar-thumb {
+#stageMessage::-webkit-scrollbar-thumb {
     background-color: #797979;
     border-radius: 20px;
     border: 2px solid #f1f2f3;
 }
 
-.stageMessage::-webkit-scrollbar-track {
+#stageMessage::-webkit-scrollbar-track {
     border-radius: 10px;
 }
 
-.containerWrite {
+#containerWrite {
     background-color: white;
     border: 1px solid #c3c3c3;
     height: 8%;
     width: 100%;
 }
 
-.messageSent {
-    display: flex;
-    justify-content: flex-start;  
-    width: 100%;  
-}
-
 .messageRequest {
     display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.messageSend {
+    display: flex;
     justify-content: flex-end;
-    
 }
 
 .text {
@@ -76,7 +75,7 @@
     border-radius: 30px;
 }
 
-.messageSent>.text {
+.messageSend>.text {
     background-color: rgb(185, 247, 183);
 }
 
@@ -84,52 +83,52 @@
     background-color: rgb(183, 209, 247);
 }
 
-.containerWrite {
+#containerWrite {
     display: flex;
     flex-direction: row;
     align-items: baseline;
 }
 
-.Write {
+#stageWrite {
     display: flex;
     width: 80%;
     height: 80%;
 }
 
-.Write input {
+#stageWrite input {
     width: 80%;
     height: 100%;
     border-radius: 15px;
     outline: none;
 }
 
-.Write input :focus {
+#stageWrite input :focus {
     border: 0px;
 }
 
-.send {
+#send {
     height: auto;
     font-size: 30px;
 }
 
-.send :hover {
+#send :hover {
     cursor: pointer;
 }
 
-.call {
+#call {
     width: 10%;
     height: 80%;
 }
 
-.call :hover {
+#call :hover {
     cursor: pointer;
 }
 
-.videoCall {
+#videoCall {
     width: 10%;
     height: 80%;
 }
 
-.videoCall :hover {
+#videoCall :hover {
     cursor: pointer;
 }
