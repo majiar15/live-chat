@@ -30,6 +30,9 @@ io.on('connect', (socket) => {
         console.log(data);
         io.sockets.emit('messageRequest', { id: socket.id, data: data });
     });
+    // socket.on('typing', (data) => {
+    //     socket.broadcast.emit('selfTyping', 'escribiendo...');
+    // });
 });
 
 

@@ -46,6 +46,13 @@
     border-radius: 10px;
 }
 
+#typing {
+    color: #797979;
+    background-color: white;
+    border: none;
+    border-color: white;
+}
+
 #containerWrite {
     background-color: white;
     border: 1px solid #c3c3c3;

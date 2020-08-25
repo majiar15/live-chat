@@ -1,9 +1,9 @@
 const socket = io();
 
-let stageMenssage = document.querySelector('#stageMessage');
-let inputWrite = document.querySelector('#write');
-
-let btnSend = document.querySelector('#send');
+const stageMenssage = document.querySelector('#stageMessage');
+const inputWrite = document.querySelector('#write');
+const typing = document.querySelector('#typing');
+const btnSend = document.querySelector('#send');
 
 btnSend.addEventListener('click', () => {
     if (inputWrite.value === "") {
@@ -22,8 +22,9 @@ inputWrite.addEventListener('keypress', (e) => {
             socket.emit('messageSend', (inputWrite.value));
             inputWrite.value = '';
         }
+    } else {
+        // socket.emit('typing');
     }
-
 });
 
 socket.on('messageRequest', (data) => {
@@ -40,3 +41,6 @@ socket.on('messageRequest', (data) => {
     }
 
 });
+// socket.on('selfTyping', (data) => {
+//     // typing.innerHTML = data
+// });
