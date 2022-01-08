@@ -1,26 +1,25 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const chatController = require('./controller/chatController');
+
+// const chatController = require('./controller/chatController');
 const SocketIO = require('socket.io');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+const roomRouter = require('./routes/room');
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.set("view engine", "ejs")
 
-
-
-app.use('/', (req, res) => {
-
-});
+app.use('/',roomRouter);
 
 let server = app.listen(port, () => {
-    console.log("server conecet");
+    console.log("server conecet port:" + port);
 });
 
 let io = SocketIO(server);
@@ -30,9 +29,7 @@ io.on('connect', (socket) => {
         console.log(data);
         io.sockets.emit('messageRequest', { id: socket.id, data: data });
     });
-    // socket.on('typing', (data) => {
-    //     socket.broadcast.emit('selfTyping', 'escribiendo...');
-    // });
+  
 });
 
 
